@@ -8,12 +8,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-20.04
-  using: 'node20'
-  main: 'main.js'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-
+        uses: 'node20'
+        
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
         with:
