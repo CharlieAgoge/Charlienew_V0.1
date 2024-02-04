@@ -19,3 +19,6 @@ resource "aws_instance" "test5" {
     Name = "sundayexample-instance"
 }
 }
+resource "aws_s3_bucket" "terraform_state2" {
+  bucket = "terraform-up-and-running-state-charlie2"
+}
