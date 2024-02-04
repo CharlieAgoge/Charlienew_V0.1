@@ -1,5 +1,5 @@
 name: build
-on: commit
+on:
   push:
     branches:
       - master
