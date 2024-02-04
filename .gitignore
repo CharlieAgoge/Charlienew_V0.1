@@ -2,6 +2,7 @@
 **/.terraform/*
 
 # .tfstate files
+<<<<<<< HEAD
 *.tfstate
 *.tfstate.*
 
@@ -32,3 +33,7 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+=======
+.tfstate
+*.tfstate.*
+>>>>>>> 9d0b563 (update)
