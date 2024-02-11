@@ -16,10 +16,8 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'secret,config'
-          hide-progress: false
           format: 'JSON'
           exit-code: '0'
-          ignore-unfixed: true
           severity: 'CRITICAL,HIGH,MEDIUM,LOW'
 
       - name: Upload Trivy scan results to GitHub Security tab
