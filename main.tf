@@ -7,6 +7,10 @@ resource "aws_s3_bucket" "terraform_state" {
 resource "aws_s3_bucket" "terraform_today" {
   bucket = "terraform-up-and-running-state-today"
 }
+resource "aws_security_group_rule" "my-rule" {
+  type        = "ingress"
+  cidr_blocks = ["0.0.0.0/0"]
+}
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
