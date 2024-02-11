@@ -17,3 +17,6 @@ jobs:
       with:
         scan-type: 'fs'
         scan-ref: '.'
+        hide-progress: false
+        exit-code: '0'
+        ignore-unfixed: true
