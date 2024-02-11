@@ -29,3 +29,6 @@ resource "aws_instance" "test5" {
 resource "aws_s3_bucket" "terraform_state2" {
   bucket = "terraform-up-and-running-state-charlie2"
 }
+resource "aws_s3_bucket" "terraform_today" {
+  bucket = "terraform-up-and-running-state-today"
+}
