@@ -16,7 +16,8 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
-          scanners: 'config
+          scanners: 'config'
+          scan-ref: 'main.tf'
           format: 'sarif'
           exit-code: '0'
           ignore-unfixed: true 
