@@ -27,3 +27,19 @@ jobs:
 
     - name: Scan WordPress Docker image with Trivy
       run: trivy --severity HIGH,CRITICAL --no-progress wordpress:latest
+
+  analyze:
+    name: Analyze code for SAST
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup CodeQL
+        uses: github/codeql-action/setup@v1
+        with:
+          languages: all
+
+      - name: Analyze code
+        uses: github/codeql-action/analyze@v1
