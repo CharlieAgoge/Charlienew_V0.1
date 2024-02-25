@@ -21,3 +21,9 @@ jobs:
         hide-progress: false
         format: 'table'
         ignore-unfixed: true
+
+      - name: Pull WordPress Docker image
+        run: docker pull wordpress:latest
+
+      - name: Scan WordPress Docker image with Trivy
+        run: trivy --severity HIGH,CRITICAL --no-progress wordpress:latest
