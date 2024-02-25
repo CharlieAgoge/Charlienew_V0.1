@@ -22,7 +22,7 @@ jobs:
         format: 'table'
         ignore-unfixed: true
 
-         - name: Install Trivy
+    - name: Install Trivy
         run: |
           wget https://github.com/aquasecurity/trivy/releases/download/v0.19.2/trivy_0.19.2_Linux-64bit.tar.gz
           tar zxvf trivy_0.19.2_Linux-64bit.tar.gz
